@@ -101,8 +101,16 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.sidebarOpen = !this.sidebarOpen;
   }
 
+  onSidebarHover() {
+    this.sidebarOpen = true;
+  }
+
+  onSidebarLeave() {
+    this.sidebarOpen = false;
+  }
+  
   public isLightTheme = false;
-  version = am5.registry.version;
+  version = 'v' + am5.registry.version;
   isModalOpen: { [key: string]: boolean } = {};
 
   private mainHttpClient: HttpClient;

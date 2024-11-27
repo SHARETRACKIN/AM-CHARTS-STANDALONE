@@ -1,4 +1,9 @@
-<ul class="side-menu" [ngClass]="{'expanded': sidebarOpen, 'collapsed': !sidebarOpen}">
+<ul 
+  class="side-menu" 
+  [ngClass]="{'expanded': sidebarOpen, 'collapsed': !sidebarOpen}"
+  (mouseenter)="onSidebarHover()" 
+  (mouseleave)="onSidebarLeave()"
+>
   <!-- App drawer icon to open the sidebar -->
   <li (click)="toggleSidebar();" class="app-drawer-icon">
     <a href="#">
@@ -14,7 +19,7 @@
 
 
   <!-- Your menu items -->
-  <li (click)="openModal('Settings'); toggleSidebar()">
+  <li (click)="openModal('Settings');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -29,7 +34,7 @@
 
   <!-- <li (click)="openModal('App Info')"><a href="#"><span><i class="pi pi-info"></i></span>App Info</a></li> -->
   <!-- <li (click)="openModal('Support')"><a href="#"><span><i class="pi pi-user-plus"></i></span>Support</a></li> -->
-  <li (click)="openModalCompanyStatutoryInformation('Company Information'); toggleSidebar()">
+  <li (click)="openModalCompanyStatutoryInformation('Company Information');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -40,7 +45,7 @@
   </li>
 
 
-  <li (click)="openModalDirectorsDealings('Directors Dealings'); toggleSidebar()">
+  <li (click)="openModalDirectorsDealings('Directors Dealings');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -52,7 +57,7 @@
 
 
   <!-- <li (click)="openModalVideos('Videos')"><a href="#"><span><i class="pi pi-video"></i></span>Videos</a></li> -->
-  <li (click)="openModalDividendsHistory('Devidends History'); toggleSidebar()">
+  <li (click)="openModalDividendsHistory('Devidends History');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -63,7 +68,7 @@
   </li>
 
 
-  <li (click)="openModalCompanyFinancialResults('Financial Results - Ratios'); toggleSidebar()">
+  <li (click)="openModalCompanyFinancialResults('Financial Results - Ratios');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -74,7 +79,7 @@
   </li>
 
 
-  <li (click)="openModalMarketNews('Market News'); toggleSidebar()">
+  <li (click)="openModalMarketNews('Market News');">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -85,7 +90,7 @@
   </li>
 
 
-  <li (click)="toggleSidebar(); openModalWatchlist('Watchlist Management')">
+  <li (click)="openModalWatchlist('Watchlist Management')">
     <a href="#">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
@@ -131,7 +136,7 @@
 
 
     <!-- Modal Containers -->
-    <div class="modal-container" *ngIf="isModalOpen['Settings']" (click)="closeModal('Settings'); toggleSidebar()">
+    <div class="modal-container" *ngIf="isModalOpen['Settings']" (click)="closeModal('Settings');">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <img class="logo2" src="../assets/images/SharetrackinBullBearLogo.svg" alt="Logo">
         <br>
@@ -145,7 +150,7 @@
           <div class="button-container">
             <div class="card__toggle">
               <label for="themeSwitcher">Dark</label>
-              <input id="themeSwitcher" class="ThemeToggle" type="checkbox" checked [checked]="isLightTheme">
+              <input id="themeSwitcher" (click)="onThemeSwitchChange()" class="ThemeToggle" type="checkbox" checked [checked]="isLightTheme">
               <label for="themeSwitcher">Light</label>
             </div>
           </div>
@@ -157,14 +162,13 @@
           <div class="divider"></div>
           <br>
           <div class="button-container">
-            <button (click)="closeModal('Settings'); toggleSidebar(); onThemeSwitchChange()">Apply</button>
+            <button (click)="closeModal('Settings');">Close</button>
           </div>
         </div>
       </div>
     </div>
 
-
-    <div class="modal-container" *ngIf="isModalOpen['Directors Dealings']" (click)="closeModal('Directors Dealings'); toggleSidebar()">
+    <div class="modal-container" *ngIf="isModalOpen['Directors Dealings']" (click)="closeModal('Directors Dealings');">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <div class="divider"></div>
         <br>
@@ -246,13 +250,13 @@
         </div>
         <br>
         <div class="button-container">
-          <button (click)="closeModal('Directors Dealings'); toggleSidebar()">Close</button>
+          <button (click)="closeModal('Directors Dealings');">Close</button>
         </div>
       </div>
     </div>
 
 
-    <div class="modal-container" *ngIf="isModalOpen['Devidends History']" (click)="closeModal('Devidends History'); toggleSidebar()">
+    <div class="modal-container" *ngIf="isModalOpen['Devidends History']" (click)="closeModal('Devidends History');">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <div class="divider"></div>
         <br>
@@ -319,13 +323,13 @@
         </div>
         <br>
         <div class="button-container">
-          <button (click)="closeModal('Devidends History'); toggleSidebar()">Close</button>
+          <button (click)="closeModal('Devidends History'); ">Close</button>
         </div>
       </div>
     </div>
 
 
-    <div class="modal-container" *ngIf="isModalOpen['Financial Results - Ratios']" (click)="closeModal('Financial Results - Ratios'); toggleSidebar()">
+    <div class="modal-container" *ngIf="isModalOpen['Financial Results - Ratios']" (click)="closeModal('Financial Results - Ratios');">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <p-scrollPanel [style]="{ width: '100%', height: '60vh' }" [style]="{ width: '100%', height: '60vh' }">
           <p-tabView styleClass="tabview-custom">
@@ -528,13 +532,13 @@
           <br>
         </p-scrollPanel>
         <div class="button-container">
-          <button (click)="closeModal('Financial Results - Ratios'); toggleSidebar()">Close</button>
+          <button (click)="closeModal('Financial Results - Ratios');">Close</button>
         </div>
       </div>
     </div>
 
 
-    <div class="modal-container" *ngIf="isModalOpen['Market News']" (click)="closeModal('Market News'); toggleSidebar()">
+    <div class="modal-container" *ngIf="isModalOpen['Market News']" (click)="closeModal('Market News');">
       <div class="modal-content" (click)="$event.stopPropagation()">
         <div class="divider"></div>
         <br>
@@ -592,7 +596,7 @@
         </div>
         <br>
         <div class="button-container">
-          <button (click)="closeModal('Market News'); toggleSidebar();">Close</button>
+          <button (click)="closeModal('Market News');">Close</button>
         </div>
       </div>
     </div>
