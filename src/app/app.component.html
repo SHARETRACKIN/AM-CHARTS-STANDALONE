@@ -1,0 +1,1138 @@
+<ul class="side-menu" [ngClass]="{'expanded': sidebarOpen, 'collapsed': !sidebarOpen}">
+  <!-- App drawer icon to open the sidebar -->
+  <li (click)="toggleSidebar();" class="app-drawer-icon">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>        
+        <!-- <i class="pi pi-bars"></i> -->
+      </span>
+      <img class="logo3" src="../assets/images/SharetrackinWordsLogo.svg" alt="Logo">
+    </a>
+  </li>
+
+
+  <!-- Your menu items -->
+  <li (click)="openModal('Settings'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <!-- <i class="pi pi-cog"></i> -->
+      </span>Settings </a>
+  </li>
+  <div class="divider"></div>
+
+
+  <!-- <li (click)="openModal('App Info')"><a href="#"><span><i class="pi pi-info"></i></span>App Info</a></li> -->
+  <!-- <li (click)="openModal('Support')"><a href="#"><span><i class="pi pi-user-plus"></i></span>Support</a></li> -->
+  <li (click)="openModalCompanyStatutoryInformation('Company Information'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+        </svg>
+        <!-- <i class="pi pi-info"></i> -->
+      </span>Company Information </a>
+  </li>
+
+
+  <li (click)="openModalDirectorsDealings('Directors Dealings'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+        </svg>
+        <!-- <i class="pi pi-chart-line"></i> -->
+      </span>Directors Dealings </a>
+  </li>
+
+
+  <!-- <li (click)="openModalVideos('Videos')"><a href="#"><span><i class="pi pi-video"></i></span>Videos</a></li> -->
+  <li (click)="openModalDividendsHistory('Devidends History'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+        </svg>
+        <!-- <i class="pi pi-money-bill"></i> -->
+      </span>Devidends History </a>
+  </li>
+
+
+  <li (click)="openModalCompanyFinancialResults('Financial Results - Ratios'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        <!-- <i class="pi pi-sliders-h"></i> -->
+      </span>Financial Results </a>
+  </li>
+
+
+  <li (click)="openModalMarketNews('Market News'); toggleSidebar()">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+        </svg>
+        <!-- <i class="pi pi-globe"></i> -->
+      </span>Market News </a>
+  </li>
+
+
+  <li (click)="toggleSidebar(); openModalWatchlist('Watchlist Management')">
+    <a href="#">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="stroke: white !important;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+        </svg>        
+        <!-- <i class="pi pi-eye"></i> -->
+      </span>Watchlist Management </a>
+  </li>
+</ul>
+
+
+
+<!-- show for 5 seconds -->
+<!-- Initially, set the element to be visible -->
+<div id="loading-wrapper" class="show-loading">
+  <div id="loading-text">LOADING</div>
+  <div id="loading-content"></div>
+</div>
+<!-- show for 5 seconds -->
+
+
+
+<div class="container">
+  <main>
+
+    <!-- then show this -->
+    <div class="card" style="background-color: var(--side-menu-backround-color); box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.26),0px 6px 10px rgba(0, 0, 0, 0.26),0px 6px 10px rgba(0, 0, 0, 0.26) !important;">
+      <img class="logo" src="../assets/images/SharetrackinBullBearLogo.svg" alt="Logo">
+      <div id="chartcontrols" style="z-index: 1;"></div>
+    </div>
+
+
+
+    <!-- this is my chart -->
+    <div class="card" style="background-color: transparent !important; box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.26),0px 6px 10px rgba(0, 0, 0, 0.26),0px 6px 10px rgba(0, 0, 0, 0.26) !important;">
+      <div id="chartdiv"></div>
+      <div class="card" style="background-color: var(--side-menu-backround-color); box-shadow: 0px -6px 10px rgba(0, 0, 0, 0.26) !important;">
+        <div id="cbottomchartcontrols" style="z-index: 1;"></div>
+      </div>
+    </div>
+    <!-- this is my chart -->
+
+
+
+    <!-- Modal Containers -->
+    <div class="modal-container" *ngIf="isModalOpen['Settings']" (click)="closeModal('Settings'); toggleSidebar()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <img class="logo2" src="../assets/images/SharetrackinBullBearLogo.svg" alt="Logo">
+        <br>
+        <div class="divider"></div>
+        <div class="text-700 text-center">
+          <br>
+          <p style="color: var(--main-content-text-color);" class="version">v{{ version }}</p>
+          <br>
+          <div class="divider"></div>
+          <br>
+          <div class="button-container">
+            <div class="card__toggle">
+              <label for="themeSwitcher">Dark</label>
+              <input id="themeSwitcher" class="ThemeToggle" type="checkbox" checked [checked]="isLightTheme">
+              <label for="themeSwitcher">Light</label>
+            </div>
+          </div>
+          <br>
+          <div class="divider"></div>
+          <i class="pi pi-phone" style="font-size: 22px; color: var(--main-content-text-color);"> Support: (012) 940-0800</i>
+          <br>
+          <br>
+          <div class="divider"></div>
+          <br>
+          <div class="button-container">
+            <button (click)="closeModal('Settings'); toggleSidebar(); onThemeSwitchChange()">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Directors Dealings']" (click)="closeModal('Directors Dealings'); toggleSidebar()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="divider"></div>
+        <br>
+        <div class="modal-header">Directors Dealings</div>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <p-scrollPanel *ngIf="hasDirectorsDealings" [style]="{ width: '100%', height: '73vh' }">
+          <ng-container *ngIf="isSkeletonLoading; else content">
+            <!-- Show p-skeleton components while loading -->
+            <p-table [value]="[]" class="my-table" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]">
+              <div class="divider"></div>
+              <br>
+              <div class="modal-header">Directors Dealings</div>
+              <br>
+              <div class="divider"></div>
+              <br>
+              <ng-template pTemplate="header">
+                <tr>
+                  <td>
+                    <p-skeleton width="60vw" height="3vh"></p-skeleton>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <table>
+                      <tr>
+                        <td>
+                          <p-skeleton width="60vw" height="70vh"></p-skeleton>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </ng-container>
+          <ng-template #content>
+            <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+              <div class="text-center mb-5">
+                <div class="card">
+                  <p-table [columns]="DirectorDealingsColumns" [value]="DirectorsDealingsArrayResponse">
+                    <div class="divider"></div>
+                    <br>
+                    <div class="modal-header">Directors Dealings</div>
+                    <br>
+                    <div class="divider"></div>
+                    <br>
+                    <ng-template pTemplate="header" let-columns>
+                      <tr>
+                        <th *ngFor="let col of columns">
+                          {{ col.header }}
+                        </th>
+                      </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-rowData let-columns="columns">
+                      <tr>
+                        <td *ngFor="let col of columns">
+                          {{ rowData[col.field] }}
+                        </td>
+                      </tr>
+                    </ng-template>
+                    <!-- <ng-template pTemplate="summary"><img class="logo4" src="../assets/images/SharetrackinBullBearLogo.svg" alt="Logo"></ng-template> -->
+                  </p-table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <br>
+          <br>
+          <br>
+        </p-scrollPanel>
+        <div *ngIf="!hasDirectorsDealings" class="no-data-message">
+          <br>
+          <div class="modal-header">No Directors Dealings Available </div>
+          <br>
+          <div class="divider"></div>
+          <br>
+        </div>
+        <br>
+        <div class="button-container">
+          <button (click)="closeModal('Directors Dealings'); toggleSidebar()">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Devidends History']" (click)="closeModal('Devidends History'); toggleSidebar()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="divider"></div>
+        <br>
+        <div class="modal-header">Devidends History</div>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <p-scrollPanel *ngIf="hasDevidendsHistory" [style]="{ width: '100%', height: '60vh' }">
+          <ng-container *ngIf="isSkeletonLoading; else content">
+            <!-- Show p-skeleton components while loading -->
+            <p-table [value]="[]" class="my-table">
+              <ng-template pTemplate="header">
+                <tr>
+                  <td>
+                    <p-skeleton width="110vw" height="3vh"></p-skeleton>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <table>
+                      <tr>
+                        <td>
+                          <p-skeleton width="110vw" height="70vh"></p-skeleton>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </ng-container>
+          <ng-template #content>
+            <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+              <div class="text-center mb-5">
+                <p-table [columns]="DividendsHistoryColumns" [value]="DividendsHistoryArrayResponse">
+                  <!-- <ng-template pTemplate="caption"> Dividends History </ng-template> -->
+                  <ng-template pTemplate="header" let-columns>
+                    <tr>
+                      <th *ngFor="let col of columns">
+                        {{ col.header }}
+                      </th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                      <td *ngFor="let col of columns">
+                        {{ rowData[col.field] }}
+                      </td>
+                    </tr>
+                  </ng-template>
+                  <!-- <ng-template pTemplate="summary"><img class="logo4" src="../assets/images/SharetrackinBullBearLogo.svg" alt="Logo"></ng-template> -->
+                </p-table>
+              </div>
+            </div>
+          </ng-template>
+          <br>
+        </p-scrollPanel>
+        <div *ngIf="!hasDevidendsHistory" class="no-data-message">
+          <br>
+          <div class="modal-header">No Available Devidends History </div>
+          <br>
+          <div class="divider"></div>
+          <br>
+        </div>
+        <br>
+        <div class="button-container">
+          <button (click)="closeModal('Devidends History'); toggleSidebar()">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Financial Results - Ratios']" (click)="closeModal('Financial Results - Ratios'); toggleSidebar()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <p-scrollPanel [style]="{ width: '100%', height: '60vh' }" [style]="{ width: '100%', height: '60vh' }">
+          <p-tabView styleClass="tabview-custom">
+            <p-tabPanel>
+              <ng-template pTemplate="header">
+                <span (click)="selectedFinancialResultsTabName('Financial Results - Ratios')">Ratios</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoading; else content">
+                <!-- Show p-skeleton components while loading -->
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #content>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+                    <p-table *ngIf="hasFinantialResults" [columns]="CompanyFinancialResultsColumns" [value]="CompanyFinancialResultsArrayResponse">
+                      <ng-template pTemplate="header" let-columns>
+                        <tr>
+                          <th>Share Code</th>
+                          <th>Financial Description</th>
+                          <th>
+                            {{ FinancialYear1 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear2 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear3 }}
+                          </th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr>
+                          <td *ngFor="let col of columns">
+                            {{ rowData[col.field] }}
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                    <div *ngIf="!hasFinantialResults" class="no-data-message">
+                      <br>
+                      <div class="modal-header">No Finantial Results Available </div>
+                      <br>
+                      <div class="divider"></div>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Income Statement">
+              <ng-template pTemplate="header">
+                <span (click)="selectedFinancialResultsTabName('Financial Results - Income Statement')">Income Statement</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoading; else content">
+                <!-- Show p-skeleton components while loading -->
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #content>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+                    <p-table [columns]="CompanyFinancialResultsColumns" [value]="CompanyFinancialResultsArrayResponse">
+                      <ng-template pTemplate="header" let-columns>
+                        <tr>
+                          <th>Share Code</th>
+                          <th>Financial Description</th>
+                          <th>
+                            {{ FinancialYear1 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear2 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear3 }}
+                          </th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr>
+                          <td *ngFor="let col of columns">
+                            {{ rowData[col.field] }}
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Balance Sheet">
+              <ng-template pTemplate="header">
+                <span (click)="selectedFinancialResultsTabName('Financial Results - Balance Sheet')">Balance Sheet</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoading; else content">
+                <!-- Show p-skeleton components while loading -->
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #content>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+                    <p-table [columns]="CompanyFinancialResultsColumns" [value]="CompanyFinancialResultsArrayResponse">
+                      <ng-template pTemplate="header" let-columns>
+                        <tr>
+                          <th>Share Code</th>
+                          <th>Financial Description</th>
+                          <th>
+                            {{ FinancialYear1 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear2 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear3 }}
+                          </th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr>
+                          <td *ngFor="let col of columns">
+                            {{ rowData[col.field] }}
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+            <p-tabPanel header="Cashflow Statement">
+              <ng-template pTemplate="header">
+                <span (click)="selectedFinancialResultsTabName('Financial Results - Cashflow Statement')">Cashflow Statement</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoading; else content">
+                <!-- Show p-skeleton components while loading -->
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #content>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+                    <p-table [columns]="CompanyFinancialResultsColumns" [value]="CompanyFinancialResultsArrayResponse">
+                      <ng-template pTemplate="header" let-columns>
+                        <tr>
+                          <th>Share Code</th>
+                          <th>Financial Description</th>
+                          <th>
+                            {{ FinancialYear1 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear2 }}
+                          </th>
+                          <th>
+                            {{ FinancialYear3 }}
+                          </th>
+                        </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr>
+                          <td *ngFor="let col of columns">
+                            {{ rowData[col.field] }}
+                          </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+          </p-tabView>
+          <br>
+        </p-scrollPanel>
+        <div class="button-container">
+          <button (click)="closeModal('Financial Results - Ratios'); toggleSidebar()">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Market News']" (click)="closeModal('Market News'); toggleSidebar()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="divider"></div>
+        <br>
+        <div class="modal-header">Market News</div>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <p-scrollPanel *ngIf="hasMarketNews" [style]="{ width: '100%', height: '73vh' }">
+          <ng-container *ngIf="isSkeletonLoading; else content">
+            <!-- Show p-skeleton components while loading -->
+            <p-table [value]="[]" class="my-table">
+              <ng-template pTemplate="header">
+                <tr>
+                  <td>
+                    <p-skeleton width="110vw" height="3vh"></p-skeleton>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <table>
+                      <tr>
+                        <td>
+                          <p-skeleton width="110vw" height="70vh"></p-skeleton>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </ng-container>
+          <ng-template #content>
+            <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+              <div class="text-center mb-5">
+                <div *ngFor="let entry of MarketNewsArrayResponse" else>
+                  <p-fieldset [legend]="(entry.Date | date: 'yyyy/MM/dd ') + ' - Description: ' + entry.Description" [toggleable]="true" [collapsed]="true">
+                    <br>
+                    <div>
+                      <p style="font-weight: bold; font-size: 18px;">Description: {{ entry.Description }}</p>
+                      <br>
+                      <p>Article: {{ entry.Article }}</p>
+                    </div>
+                  </p-fieldset>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </p-scrollPanel>
+        <div *ngIf="!hasMarketNews" class="no-data-message">
+          <br>
+          <div class="modal-header">No Available News </div>
+          <br>
+          <div class="divider"></div>
+          <br>
+        </div>
+        <br>
+        <div class="button-container">
+          <button (click)="closeModal('Market News'); toggleSidebar();">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Company Information']" (click)="closeModal('Company Information')">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="divider"></div>
+        <br>
+        <div class="modal-header">Company Information</div>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <p-scrollPanel *ngIf="hasCompanyInformation" [style]="{ width: '100%', height: '73vh' }">
+          <ng-container *ngIf="isSkeletonLoading; else content">
+            <!-- Show p-skeleton components while loading -->
+            <p-table [value]="[]" class="my-table">
+              <ng-template pTemplate="header">
+                <tr>
+                  <td>
+                    <p-skeleton width="110vw" height="3vh"></p-skeleton>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <table>
+                      <tr>
+                        <td>
+                          <p-skeleton width="110vw" height="70vh"></p-skeleton>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </ng-container>
+          <ng-template #content>
+            <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+              <div class="text-center mb-5">
+                <div class="grid">
+                  <div class="col-12 lg:col-6">
+                    <div class="p-3 h-full">
+                      <ul>
+                        <li class="custom-marker" *ngFor="let companyInfo of companyInformation;">
+                          <p-panel header="Share Code">
+                            <div *ngIf="companyInfo">{{ companyInfo.ShareCode }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Company Full Name">
+                            <div *ngIf="companyInfo">{{ companyInfo.CompanyFullName }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Tel">
+                            <div *ngIf="companyInfo">{{ companyInfo.Tel }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Industry">
+                            <div *ngIf="companyInfo">{{ companyInfo.Industry }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Sector">
+                            <div *ngIf="companyInfo">{{ companyInfo.Sector }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Sub Sector">
+                            <div *ngIf="companyInfo">{{ companyInfo.SubSector }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Year End">
+                            <div *ngIf="companyInfo">{{ companyInfo.YearEnd }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Short Name">
+                            <div *ngIf="companyInfo">{{ companyInfo.ShortName }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Email">
+                            <div *ngIf="companyInfo">{{ companyInfo.Email }}</div>
+                          </p-panel>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 lg:col-6">
+                    <div class="p-3 h-full">
+                      <ul>
+                        <li class="custom-marker" *ngFor="let companyInfo of companyInformation;">
+                          <p-panel header="Postal Address">
+                            <div *ngIf="companyInfo">{{ companyInfo.PostalAddress }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Postal Code">
+                            <div *ngIf="companyInfo">{{ companyInfo.PostalCode }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Postal Region">
+                            <div *ngIf="companyInfo">{{ companyInfo.PostalRegion }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Postal Suburb">
+                            <div *ngIf="companyInfo">{{ companyInfo.PostalSuburb }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Postal Town">
+                            <div *ngIf="companyInfo">{{ companyInfo.PostalTown }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Residential Address">
+                            <div *ngIf="companyInfo">{{ companyInfo.ResidentialAddress }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Residential Region">
+                            <div *ngIf="companyInfo">{{ companyInfo.ResidentialRegion }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Residential Suburb">
+                            <div *ngIf="companyInfo">{{ companyInfo.ResidentialSuburb }}</div>
+                          </p-panel>
+                          <br>
+                          <p-panel header="Residential Town">
+                            <div *ngIf="companyInfo">{{ companyInfo.ResidentialTown }}</div>
+                          </p-panel>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <ul>
+                  <li class="custom-marker" *ngFor="let companyInfo of companyInformation;">
+                    <br>
+                    <p-panel width="100" header="Nature Of Business">
+                      <div *ngIf="companyInfo">{{ companyInfo.NatureOfBusiness }}</div>
+                    </p-panel>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ng-template>
+        </p-scrollPanel>
+        <div *ngIf="!hasCompanyInformation" class="no-data-message">
+          <br>
+          <div class="modal-header">No Available Company Information </div>
+          <br>
+          <div class="divider"></div>
+          <br>
+        </div>
+        <br>
+        <div class="button-container">
+          <button (click)="closeModal('Company Information')">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Watchlist Management']" (click)="closeModal('Watchlist Management')">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="divider"></div>
+        <br>
+        <div class="modal-header">Watchlist Management</div>
+        <br>
+        <div class="divider"></div>
+        <br>
+        <p-scrollPanel [style]="{ width: '100%', height: '73vh' }">
+          <p-tabView styleClass="tabview-custom">
+            <p-tabPanel (header)="enteredWatchlist1Name">
+              <ng-template pTemplate="header">
+                <span (click)="selectedWatchlistTabName('Watchlist 1')">{{ enteredWatchlist1Name }}</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoadingWL; else contentWatchlist1">
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #contentWatchlist1>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+
+                    <input class="p-inputtext" (keyup)="onWatchlist1NameKeyUp($event)" name="WatchlistName" type="text" pInputText [(ngModel)]="enteredWatchlist1Name" placeholder="Enter the Watchlist Name here:" />
+                    
+                    <p-dropdown [options]="allWatchlistTickers" [(ngModel)]="selectedWatchlist1Item" [filter]="true" filterBy="ShareCode" [showClear]="true" [virtualScroll]="true" [virtualScrollItemSize]="60" placeholder="Select a Share">
+                      <ng-template pTemplate="selectedItem">
+                        <div class="flex align-items-center gap-2" *ngIf="selectedWatchlist1Item">
+                          <div style="font-size: 12px;">{{ selectedWatchlist1Item.ShareCode }}</div>
+                        </div>
+                      </ng-template>
+                    </p-dropdown>
+                    <button (click)="saveWatchlist1Item()" pButton pRipple label="" icon="pi pi-check" class="p-button-success"></button>
+                    
+                    <br>
+
+                    <div class="col-12 lg:col-12">
+                      <div class="p-3 h-full">
+                        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+                          <!-- <th style="font-size: 24px !important;">{{ enteredWatchlist1Name }}</th> -->
+                          <button *ngIf="myWatchlist1Tickers.length >= 2" (click)="deleteSelectedWatchlist1Items()" pButton pRipple label="Remove all from Watchlist" icon="pi pi-trash" class="p-button-danger"></button>
+                          <br>
+                          <p-table [value]="myWatchlist1Tickers" [dataKey]="'id'">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <!-- <th style="width: 3rem">
+                                  <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                                </th> -->
+                                <th style="font-size: 12px !important;">Share Code</th>
+                                <th style="font-size: 12px !important;">Remove</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-watchlistitem1>
+                              <ng-container *ngIf="!['headingOptions', 'addToWatchlist', 'removeFromWatchlist', 'headingSharesList', 'myWatchlistName1', 'myWatchlistName2', 'myWatchlistName3', 'myWatchlistName4', 'myWatchlistName5'].includes(watchlistitem1.id)">
+                                <tr>
+                                  <!-- <td>
+                                    <p-tableCheckbox [value]="watchlistitem1"></p-tableCheckbox>
+                                  </td> -->
+                                  <td style="font-size: 12px !important;">{{ watchlistitem1.id }}</td>
+                                  <td>
+                                    <button (click)="deleteWatchlist1ItemOnly(watchlistitem1)" pButton pRipple label="" severity="danger" icon="pi pi-trash" iconPos="right" class="p-button-danger"></button>
+                                  </td>
+                                </tr>
+                              </ng-container>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+
+
+            <p-tabPanel (header)="enteredWatchlist2Name">
+              <ng-template pTemplate="header">
+                <span (click)="selectedWatchlistTabName('Watchlist 2')">{{ enteredWatchlist2Name }}</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoadingWL; else contentWatchlist2">
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #contentWatchlist2>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+
+                    <input class="p-inputtext" (keyup)="onWatchlist2NameKeyUp($event)" name="WatchlistName" type="text" pInputText [(ngModel)]="enteredWatchlist2Name" placeholder="Enter the Watchlist Name here:" />
+          
+                    <p-dropdown [options]="allWatchlistTickers" [(ngModel)]="selectedWatchlist2Item" [filter]="true" filterBy="ShareCode" [showClear]="true" [virtualScroll]="true" [virtualScrollItemSize]="60" placeholder="Select a Share">
+                      <ng-template pTemplate="selectedItem">
+                        <div class="flex align-items-center gap-2" *ngIf="selectedWatchlist2Item">
+                          <div>{{ selectedWatchlist2Item.ShareCode }}</div>
+                        </div>
+                      </ng-template>
+                    </p-dropdown>
+                    <button (click)="saveWatchlist2Item()" pButton pRipple label="" icon="pi pi-check" class="p-button-success"></button>
+                    
+                    <br>
+
+                    <div class="col-12 lg:col-12">
+                      <div class="p-3 h-full">
+                        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+                          <!-- <th style="font-size: 24px !important;">{{ enteredWatchlist2Name }}</th> -->
+                          <br>
+                          <button *ngIf="myWatchlist2Tickers.length >= 2" (click)="deleteSelectedWatchlist2Items()" pButton pRipple label="Remove all from Watchlist" icon="pi pi-trash" class="p-button-danger"></button>
+                          <br>
+                          <p-table [value]="myWatchlist2Tickers" [dataKey]="'id'" [selectionMode]="'multiple'">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th style="font-size: 12px !important;">Share Code</th>
+                                <th style="font-size: 12px !important;">Remove</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-watchlistitem2>
+                              <ng-container *ngIf="!['headingOptions', 'addToWatchlist', 'removeFromWatchlist', 'headingSharesList', 'myWatchlistName1', 'myWatchlistName2', 'myWatchlistName3', 'myWatchlistName4', 'myWatchlistName5'].includes(watchlistitem2.id)">
+                                <tr>
+                                  <td style="font-size: 16px !important;">{{ watchlistitem2.id }}</td>
+                                  <td>
+                                    <button (click)="deleteWatchlist2ItemOnly(watchlistitem2)" pButton pRipple label="" severity="danger" icon="pi pi-trash" iconPos="right" class="p-button-danger"></button>
+                                  </td>
+                                </tr>
+                              </ng-container>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+
+            <p-tabPanel (header)="enteredWatchlist3Name">
+              <ng-template pTemplate="header">
+                <span (click)="selectedWatchlistTabName('Watchlist 3')">{{ enteredWatchlist3Name }}</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoadingWL; else contentWatchlist3">
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #contentWatchlist3>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+
+                    <input class="p-inputtext" (keyup)="onWatchlist3NameKeyUp($event)" name="WatchlistName" type="text" pInputText [(ngModel)]="enteredWatchlist3Name" placeholder="Enter the Watchlist Name here:" />
+          
+                    <p-dropdown [options]="allWatchlistTickers" [(ngModel)]="selectedWatchlist3Item" [filter]="true" filterBy="ShareCode" [showClear]="true" [virtualScroll]="true" [virtualScrollItemSize]="60" placeholder="Select a Share">
+                      <ng-template pTemplate="selectedItem">
+                        <div class="flex align-items-center gap-3" *ngIf="selectedWatchlist3Item">
+                          <div>{{ selectedWatchlist3Item.ShareCode }}</div>
+                        </div>
+                      </ng-template>
+                    </p-dropdown>
+                    <button (click)="saveWatchlist3Item()" pButton pRipple label="" icon="pi pi-check" class="p-button-success"></button>
+                    
+                    <br>
+
+                    <div class="col-12 lg:col-12">
+                      <div class="p-3 h-full">
+                        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+                          <!-- <th style="font-size: 24px !important;">{{ enteredWatchlist3Name }}</th> -->
+                          <br>
+                          <button *ngIf="myWatchlist3Tickers.length >= 2" (click)="deleteSelectedWatchlist3Items()" pButton pRipple label="Remove all from Watchlist" icon="pi pi-trash" class="p-button-danger"></button>
+                          <br>
+                          <p-table [value]="myWatchlist3Tickers" [dataKey]="'id'" [selectionMode]="'multiple'">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th style="font-size: 12px !important;">Share Code</th>
+                                <th style="font-size: 12px !important;">Remove</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-watchlistitem3>
+                              <ng-container *ngIf="!['headingOptions', 'addToWatchlist', 'removeFromWatchlist', 'headingSharesList', 'myWatchlistName1', 'myWatchlistName3', 'myWatchlistName3', 'myWatchlistName4', 'myWatchlistName5'].includes(watchlistitem3.id)">
+                                <tr>
+                                  <td style="font-size: 16px !important;">{{ watchlistitem3.id }}</td>
+                                  <td>
+                                    <button (click)="deleteWatchlist3ItemOnly(watchlistitem3)" pButton pRipple label="" severity="danger" icon="pi pi-trash" iconPos="right" class="p-button-danger"></button>
+                                  </td>
+                                </tr>
+                              </ng-container>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+
+            <p-tabPanel (header)="enteredWatchlist4Name">
+              <ng-template pTemplate="header">
+                <span (click)="selectedWatchlistTabName('Watchlist 4')">{{ enteredWatchlist4Name }}</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoadingWL; else contentWatchlist4">
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #contentWatchlist4>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+
+                    <input class="p-inputtext" (keyup)="onWatchlist4NameKeyUp($event)" name="WatchlistName" type="text" pInputText [(ngModel)]="enteredWatchlist4Name" placeholder="Enter the Watchlist Name here:" />
+          
+                    <p-dropdown [options]="allWatchlistTickers" [(ngModel)]="selectedWatchlist4Item" [filter]="true" filterBy="ShareCode" [showClear]="true" [virtualScroll]="true" [virtualScrollItemSize]="60" placeholder="Select a Share">
+                      <ng-template pTemplate="selectedItem">
+                        <div class="flex align-items-center gap-4" *ngIf="selectedWatchlist4Item">
+                          <div>{{ selectedWatchlist4Item.ShareCode }}</div>
+                        </div>
+                      </ng-template>
+                    </p-dropdown>
+                    <button (click)="saveWatchlist4Item()" pButton pRipple label="" icon="pi pi-check" class="p-button-success"></button>
+                    
+                    <br>
+
+                    <div class="col-12 lg:col-12">
+                      <div class="p-3 h-full">
+                        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+                          <!-- <th style="font-size: 24px !important;">{{ enteredWatchlist4Name }}</th> -->
+                          <br>
+                          <button *ngIf="myWatchlist4Tickers.length >= 2" (click)="deleteSelectedWatchlist4Items()" pButton pRipple label="Remove all from Watchlist" icon="pi pi-trash" class="p-button-danger"></button>
+                          <br>
+                          <p-table [value]="myWatchlist4Tickers" [dataKey]="'id'" [selectionMode]="'multiple'">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th style="font-size: 12px !important;">Share Code</th>
+                                <th style="font-size: 12px !important;">Remove</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-watchlistitem4>
+                              <ng-container *ngIf="!['headingOptions', 'addToWatchlist', 'removeFromWatchlist', 'headingSharesList', 'myWatchlistName1', 'myWatchlistName4', 'myWatchlistName4', 'myWatchlistName4', 'myWatchlistName5'].includes(watchlistitem4.id)">
+                                <tr>
+                                  <td style="font-size: 16px !important;">{{ watchlistitem4.id }}</td>
+                                  <td>
+                                    <button (click)="deleteWatchlist4ItemOnly(watchlistitem4)" pButton pRipple label="" severity="danger" icon="pi pi-trash" iconPos="right" class="p-button-danger"></button>
+                                  </td>
+                                </tr>
+                              </ng-container>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+            
+            <p-tabPanel (header)="enteredWatchlist5Name">
+              <ng-template pTemplate="header">
+                <span (click)="selectedWatchlistTabName('Watchlist 5')">{{ enteredWatchlist5Name }}</span>
+              </ng-template>
+              <ng-container *ngIf="isSkeletonLoadingWL; else contentWatchlist5">
+                <p-table [value]="[]" class="my-table">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <td>
+                        <p-skeleton width="100%" height="60vh"></p-skeleton>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </ng-container>
+              <ng-template #contentWatchlist5>
+                <div class="surface-card p-4 shadow-2 border-round w-full lg:w-12">
+                  <div class="text-center mb-5">
+
+                    <input class="p-inputtext" (keyup)="onWatchlist5NameKeyUp($event)" name="WatchlistName" type="text" pInputText [(ngModel)]="enteredWatchlist5Name" placeholder="Enter the Watchlist Name here:" />
+          
+                    <p-dropdown [options]="allWatchlistTickers" [(ngModel)]="selectedWatchlist5Item" [filter]="true" filterBy="ShareCode" [showClear]="true" [virtualScroll]="true" [virtualScrollItemSize]="60" placeholder="Select a Share">
+                      <ng-template pTemplate="selectedItem">
+                        <div class="flex align-items-center gap-5" *ngIf="selectedWatchlist5Item">
+                          <div>{{ selectedWatchlist5Item.ShareCode }}</div>
+                        </div>
+                      </ng-template>
+                    </p-dropdown>
+                    <button (click)="saveWatchlist5Item()" pButton pRipple label="" icon="pi pi-check" class="p-button-success"></button>
+                    
+                    <br>
+
+                    <div class="col-12 lg:col-12">
+                      <div class="p-3 h-full">
+                        <div class="shadow-2 p-3 h-full flex flex-column surface-card" style="border-radius: 6px">
+                          <!-- <th style="font-size: 24px !important;">{{ enteredWatchlist5Name }}</th> -->
+                          <br>
+                          <button *ngIf="myWatchlist5Tickers.length >= 2" (click)="deleteSelectedWatchlist5Items()" pButton pRipple label="Remove all from Watchlist" icon="pi pi-trash" class="p-button-danger"></button>
+                          <br>
+                          <p-table [value]="myWatchlist5Tickers" [dataKey]="'id'" [selectionMode]="'multiple'">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th style="font-size: 12px !important;">Share Code</th>
+                                <th style="font-size: 12px !important;">Remove</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-watchlistitem5>
+                              <ng-container *ngIf="!['headingOptions', 'addToWatchlist', 'removeFromWatchlist', 'headingSharesList', 'myWatchlistName1', 'myWatchlistName5', 'myWatchlistName5', 'myWatchlistName5', 'myWatchlistName5'].includes(watchlistitem5.id)">
+                                <tr>
+                                  <td style="font-size: 16px !important;">{{ watchlistitem5.id }}</td>
+                                  <td>
+                                    <button (click)="deleteWatchlist5ItemOnly(watchlistitem5)" pButton pRipple label="" severity="danger" icon="pi pi-trash" iconPos="right" class="p-button-danger"></button>
+                                  </td>
+                                </tr>
+                              </ng-container>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                </div>
+              </ng-template>
+            </p-tabPanel>
+            
+          </p-tabView>
+          <br>
+        </p-scrollPanel>
+        <div class="button-container">
+          <button (click)="closeModal('Watchlist Management')">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal-container" *ngIf="isModalOpen['Financial Statements']">
+      <div class="modal-content">
+        <button (click)="closeModal('Financial Statements')">Close</button>
+        <p>Financial Statements Content</p>
+      </div>
+    </div>
+    <!-- then show this -->
+
+
+  </main>
+</div>
+<p-toast position="bottom-center" key="bc" [life]="1000"></p-toast>
+<p-toast position="bottom-center" key="tl" [life]="1000"></p-toast>
+<p-toast></p-toast>
+<!-- <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog> -->
+<p-confirmDialog #cd [style]="{width: '60vw'}">
+  <ng-template pTemplate="header">
+      <h3>Delete Confirmation</h3>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+      <button type="button" pButton 
+          icon="pi pi-times" label="Cancel"
+          (click)="cd.reject()">
+      </button>
+     
+      <button type="button" class="p-button-danger" pButton 
+          icon="pi pi pi-trash" label="confirm!"
+          (click)="cd.accept()">
+      </button>
+  </ng-template>
+</p-confirmDialog>

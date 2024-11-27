@@ -1,0 +1,594 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+// Importing themes
+@import "theme";
+
+.p-skeleton {
+  background-color: var(--skeleton-load-backround-color) !important;
+  border-radius: 6px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+// body {
+//     font-family: var(--font-family);
+// }
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.am5-modal-content {
+  // background: rgb(23 23 26)!important;
+  border-radius: 12px!important;
+  color: var(--main-content-text-color)!important;
+  background: var(--am5modal-background-colour)!important;
+}
+
+.am5stock-control-button {
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.am5stock-control-button path {
+  stroke-width: 0.5;
+  stroke: #ffffff !important;
+}
+
+.am5stock-control-list-container {
+  background: var(--top-menu-container-color) !important;
+  border-radius: 12px !important;
+}
+
+.flatpickr-day:hover .flatpickr-day.prevMonthDay:hover {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+// Toolbar Export Menu
+
+a.am5exporting-icon,
+.am5exporting-list {
+  background: #7c7c7c00;
+}
+
+a.am5exporting-icon:hover,
+.am5exporting-menu-open a.am5exporting-icon,
+.am5exporting-item a:hover {
+  background: #7c7c7c00;
+}
+
+.am5exporting-menu.am5exporting-valign-top,
+.am5exporting-icon.am5exporting-valign-top,
+.am5exporting-list.am5exporting-align-top {
+  top: -15px !important;
+  right: 20px !important;
+}
+
+// .am5exporting-menu.am5exporting-align-right, .am5exporting-icon.am5exporting-align-right, .am5exporting-list.am5exporting-align-right {
+//   right: 15px !important;
+// }
+
+.am5stock-control-list li div,
+.am5stock-control-list li label {
+  display: inline-block;
+  margin-right: 1em;
+  color: var(--top-menu-container-text-color) !important;
+  padding: 2px;
+}
+
+.flatpickr-calendar {
+  background: var(--modal-backround-color) !important;
+  color: var(--top-menu-container-text-color) !important;
+}
+
+.flatpickr-day {
+  color: var(--main-content-text-color) !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  color: var(--primary-color) !important;
+}
+
+.flatpickr-current-month input.cur-year {
+  color: var(--primary-color) !important;
+}
+
+.am5-modal-button.am5-modal-primary {
+  background: #4caf50 !important;
+  border-radius: 4px !important;
+}
+
+.am5-modal-button.am5-modal-scondary {
+  background: #ff0000 !important;
+  border-radius: 4px !important;
+}
+
+.flatpickr-input {
+  color: var(--primary-color) !important;
+  border-radius: 4px !important;
+  background-color: var(--modal-backround-color) !important;
+}
+
+span.flatpickr-weekday {
+  color: var(--main-content-text-color) !important;
+}
+
+.modal-content {
+  background-color: var(--modal-backround-color) !important;
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+
+.am5stock-control-button {
+  color: white !important;
+}
+
+.am5stock-link:hover {
+  background: rgba(177, 152, 152, 0) !important;
+}
+
+.am5stock-link.am5stock-active {
+  background: #597135 !important;
+}
+
+.am5stock-control-button:hover {
+  background: #7b7b7b00 !important;
+}
+
+.am5stock-control-button-active {
+  background: #597135 !important;
+}
+
+.am5stock-control-list-arrow {
+  background: var(--primary-color) !important;
+}
+
+.am5stock-list-search input {
+  border: 1px solid var(--primary-color) !important;
+  padding: 6px 10px 6px 30px;
+  border-radius: 4px !important;
+  margin-top: 5px;
+  color: var(--top-menu-container-text-color) !important;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAuNSIgY3k9IjEwLjUiIHI9IjcuNSIvPjxsaW5lIHgxPSIyMSIgeDI9IjE1LjgiIHkxPSIyMSIgeTI9IjE1LjgiLz48L3N2Zz4=)
+    5px center / 20px 20px no-repeat var(--top-menu-container-color) !important;
+}
+
+.am5stock-control-list li:hover {
+  // color: black !important;
+  border-radius: 4px !important;
+  // background-color: var(--top-menu-container-hover-color) !important;
+}
+
+.am5stock-control-drawing-tools {
+  background-color: var(--side-menu-backround-color) !important;
+  margin-left: 61%;
+  // padding-left: 20%;
+  width: 28% !important ;
+  border-bottom-right-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+}
+
+// .am5stock-control-list li:hover {
+//   background: var(--top-menu-container-hover-color) !important;
+// }
+
+// .am5stock-control-list li.am5stock-list-heading {
+//   font-style: normal;
+//   font-weight: bolder;
+//   padding-bottom: 12px;
+//   font-size: 18px;
+//   color: red;
+//   margin-top: 0.3em;
+// }
+
+//  li.am5stock-list-heading :hover {
+//   background: transparent !important;
+// }
+
+// .am5stock-control-list li:hover {
+//   background: rgba(217, 217, 217, 0) !important;
+// }
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.43);
+  backdrop-filter: blur(10px); // Adjust the blur amount as needed
+}
+
+svg {
+  stroke: var(--main-content-text-color) !important;
+}
+
+.p-datatable-table {
+  border-radius: 12px !important;
+}
+
+th {
+  color: var(--main-content-text-color) !important;
+  font-weight: bolder !important;
+  font-size: 15px !important;
+}
+
+td {
+  color: var(--main-content-text-color) !important;
+  font-size: 12px !important;
+}
+
+.p-datatable .p-datatable-header {
+  background: var(--modal-backround-color) !important;
+  color: var(--primary-color) !important;
+  font-size: 20px !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-datatable .p-datatable-footer {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-tabview .p-tabview-nav {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: var(--modal-backround-color) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-tabview .p-tabview-panels {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  box-shadow: none !important;
+}
+
+.p-dialog .p-dialog-header  {
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+}
+
+.p-dialog .p-dialog-content {
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+}
+
+.p-dialog .p-dialog-footer {
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+}
+
+.p-button:enabled:focus {
+  box-shadow: 0 0 0 0.5px var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* CSS for the modal container */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1000; /* Ensure the modal is on top of other content */
+}
+
+/* CSS for the modal content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  max-width: 80%; /* Adjust the width as needed */
+  // text-align: center;
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+
+.button-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+  background: var(--primary-color) !important;
+  border: 0 none;
+}
+
+.pi :hover {
+  color: var(--primary-color) !important;
+}
+
+.p-panel .p-panel-content {
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+}
+
+.am5exporting-icon {
+  @media (max-width: 800px) {
+    // Adjust the max-width as per your mobile breakpoint
+    visibility: hidden !important; // Hide the chart controls on mobile
+  }
+}
+
+.p-fieldset {
+  margin: 20px !important;
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+  color: var(--main-content-text-color) !important;
+  background: var(--p-fieldset-header-color) !important;
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a:focus {
+  box-shadow: var(--primary-color) !important;
+}
+
+.p-panel .p-panel-header {
+  background: var(--p-fieldset-header-color) !important;
+  color: var(--main-content-text-color) !important;
+  font-weight: bolder !important;
+  font-size: 20px !important;
+}
+
+.p-dropdown.p-dropdown-clearable .p-dropdown-label {
+  /* padding-right: 32.75rem; */
+  width: 20vw;
+}
+
+.p-dropdown .p-dropdown-label {
+  background: var(--modal-backround-color) !important;
+}
+
+.p-dropdown .p-dropdown-trigger {
+  background: var(--p-fieldset-header-color) !important;
+  color: var(--primary-color) !important;
+}
+
+.p-dropdown {
+  text-align: start !important;
+  background: var(--p-fieldset-header-color) !important;
+  border: 3px solid var(--p-fieldset-header-color) !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  padding-bottom: 2px !important;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+  box-shadow: none !important;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+  color: var(--main-content-text-color) !important;
+}
+
+.p-dropdown-panel .p-dropdown-header {
+  border-bottom: 2px solid var(--primary-color) !important;
+  color: var(--main-content-text-color) !important;
+  background: var(--p-fieldset-header-color) !important;
+}
+
+.p-dropdown-panel {
+  background: var(--modal-backround-color) !important;
+  color: var(--main-content-text-color) !important;
+  border: 0 none;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.p-dropdown-panel
+  .p-dropdown-items
+  .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+  color: var(--primary-color) !important;
+  background: var(--p-fieldset-header-color) !important;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  border: 0 none;
+  color: var(--main-content-text-color) !important;
+  background: transparent;
+  transition: box-shadow 0.2s;
+  border-radius: 0;
+  font-size: 12px !important;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: transparent !important;
+}
+
+.p-inputtext {
+  padding: 0.5rem 0.75rem !important;
+  font-size: 12px !important;
+  color: var(--main-content-text-color) !important;
+  background: var(--modal-backround-color) !important;
+  border: 1px solid var(--modal-backround-color) !important;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 0.5px var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+svg {
+  stroke: var(--primary-color) !important;
+}
+
+
+
+
+// .modal-content button {
+//   background-color: var(--p-fieldset-header-color) !important;
+//   color: var(--main-content-text-color) !important;
+//   padding: 20px 20px !important;
+//   border: none;
+//   padding: 10px 20px;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   left: 10px !important;
+// }
+
+.modal-content[_ngcontent-ng-c403250014] button[_ngcontent-ng-c403250014] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.p-checkbox .p-checkbox-box {
+  border: 2px solid var(--modal-backround-color) !important;
+  background: var(--p-fieldset-header-color) !important;
+  color: var(--primary-color);
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: var(--main-content-text-color) !important;
+  background: transparent !important;
+}
+
+.surface-card {
+  background-color: var(--p-fieldset-header-color) !important;
+}
+
+/* Close button style (optional) */
+.modal-content button {
+  background-color: var(--primary-color);
+  color: var(--main-content-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.p-button.p-button-success,
+.p-buttonset.p-button-success > .p-button,
+.p-splitbutton.p-button-success > .p-button {
+  height: 55px !important;
+  bottom: 9px !important;
+  background: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+}
+
+.p-dropdown-clear-icon {
+  margin-right: 20px !important;
+}
+
+.p-scroller {
+  min-height: 400px !important;
+}
+
+// buttons
+
+//use these
+// <div class="container">
+
+//       <button class="btn btn-primary">Click Me</button>
+//       <button class="btn btn-success">Click Me</button>
+//       <button class="btn btn-danger">Click Me</button>
+//       <button class="btn btn-warning">Click Me</button>
+//        <button class="btn btn-default">Click Me</button>
+
+// </div>
+//use these
+
+.text-center {
+  text-align: center;
+}
+.block-center {
+  margin: 0 auto;
+}
+
+.btn {
+  height: 35px;
+  margin: 5px 10px;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn.btn-default {
+  background-color: #ddd;
+  color: #000000;
+}
+/*
+Color Palette
+http://paletton.com/#uid=72V0N0kuau0ivABnyvavenqATio
+*/
+.btn.btn-primary {
+  background-color: #17499f;
+  color: #ffffff;
+}
+.btn.btn-primary:hover {
+  background-color: #0e377c;
+}
+.btn.btn-success {
+  background-color: #0ab13c;
+  color: #ffffff;
+}
+.btn.btn-success:hover {
+  background-color: #038a2c;
+}
+.btn.btn-danger {
+  background-color: #ef2d0e;
+  color: #ffffff;
+}
+.btn.btn-danger:hover {
+  background-color: #bb1d05;
+}
+.btn.btn-warning {
+  background-color: #ef9f0e;
+  color: #ffffff;
+}
+.btn.btn-warning:hover {
+  background-color: #bb7a05;
+}
+
+.p-button.p-button-icon-only {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  padding: 0rem 0 !important;
+}
+
+.modal-content button {
+  padding: 2px 20px !important;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.5rem 2rem !important;
+}
+// buttons
